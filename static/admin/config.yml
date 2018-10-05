@@ -1,0 +1,115 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: projects
+    label: Projects
+    folder: projects
+    create: true
+    fields:
+      - {
+          name: 'title',
+          label: 'Title',
+          delete: false,
+          extension: 'md',
+          widget: 'string',
+          required: true,
+          slug: '{{slug}}',
+          frontmatter_delimiter: '#!',
+        }
+      - {
+          name: 'date',
+          label: 'Date',
+          delete: false,
+          extension: 'md',
+          widget: 'date',
+          required: true,
+          format: 'MM DD YYYY',
+          slug: '{{slug}}',
+          frontmatter_delimiter: '#!',
+        }
+      - {
+          name: 'location',
+          label: 'Location',
+          delete: true,
+          required: true,
+          extension: 'md',
+          widget: 'string',
+          slug: '{{slug}}',
+          frontmatter_delimiter: '#!',
+        }
+      - {
+          name: 'description',
+          label: 'Description',
+          delete: false,
+          extension: 'md',
+          widget: 'text',
+          required: true,
+          slug: '{{slug}}',
+          frontmatter_delimiter: '#!',
+        }
+      - {
+          name: 'main_image',
+          label: 'Main Image',
+          delete: false,
+          widget: 'file',
+          required: true,
+          slug: '{{slug}}',
+        }
+      - {
+          name: 'project_information',
+          label: 'Project Information',
+          delete: false,
+          widget: 'object',
+          slug: '{{slug}}',
+          fields: [
+            {
+              name: 'project_caption',
+              label: 'Project Caption',
+              delete: false,
+              extension: 'md',
+              widget: 'string',
+              required: true,
+              slug: '{{slug}}',
+              frontmatter_delimiter: '#!',
+            },
+            {
+              name: 'project_image',
+              label: 'Project Image',
+              delete: false,
+              widget: 'file',
+              required: true,
+              slug: '{{slug}}',
+            }
+          ]
+        }
+      - {
+          name: 'process_information',
+          label: 'Process Information',
+          delete: false,
+          widget: 'object',
+          slug: '{{slug}}',
+          fields: [
+            {
+              name: 'process_caption',
+              label: 'Process Caption',
+              delete: false,
+              extension: 'md',
+              widget: 'string',
+              required: true,
+              slug: '{{slug}}',
+              frontmatter_delimiter: '#!',
+            },
+            {
+              name: 'process_image',
+              label: 'Process Image',
+              delete: false,
+              widget: 'file',
+              required: true,
+              slug: '{{slug}}',
+            }
+          ]
+        }
