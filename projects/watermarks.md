@@ -4,7 +4,7 @@ date: 01 16 2014
 location: Destroyed
 main_image: /assets/texture-swatche_watermarks.jpg
 project_information:
-  project_caption: 'Vessels Enliven, Deterioration, Evaporation. Detail of Evaporation. '
+  project_caption: 'Vessels: Enliven, Deterioration, Evaporation. Detail of Evaporation. '
   project_description: >-
     Watermarks explores the different lives of water through the forms of
     vessels that traditionally have been used to hold water. The series is
